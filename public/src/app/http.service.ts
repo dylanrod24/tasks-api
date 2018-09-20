@@ -10,9 +10,10 @@ export class HttpService {
 
     getTasks(){
         // Our http response is an observable, store it in a variable
-        let tempObservable = this._http.get('/tasks');
+        // let tempObservable = this._http.get('/tasks');
         // Subscribe to the Observable and provide the code we would like to do with our data from the response
-        tempObservable.subscribe(data => console.log("Got our tasks.", data));
+        // tempObservable.subscribe(data => console.log("Got our tasks.", data));
+        return this._http.get('/tasks')
 
     }
 
