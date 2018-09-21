@@ -7,3 +7,10 @@
 .btn {
     margin-left: 5px;
 }
+#showTasks {
+    margin-left: 85px;
+    margin-top: -65px;
+}
+#createTask {
+    margin-left: -15px;
+}
