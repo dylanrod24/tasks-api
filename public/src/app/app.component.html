@@ -16,9 +16,13 @@
         <!-- <div class="card-header">Header</div> -->
         <div class="card-body">
           <h5 class="card-title">{{t.title}}</h5>
-          <p class="card-text">{{t.description}}</p>
+          <p *ngIf="isHidden == false" class="card-text">{{t.description}}</p>
+          <button class="btn btn-danger" (click)="onButtonClickShow()">Show</button>
         </div>
       </div>
+    </div>
+    <div class="row">
+      <button class="btn btn-info" (click)="onButtonClick()">Get all tasks</button>
     </div>
   </div>
 </div>
