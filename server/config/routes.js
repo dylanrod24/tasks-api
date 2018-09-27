@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 var taskController = require('./../controllers/tasks.js');
 Task = mongoose.model('Task');
+var path = require('path');
 
 module.exports = function(app){
     // Retrieves all tasks
@@ -13,4 +14,7 @@ module.exports = function(app){
     app.put('/tasks/:id', taskController.update),
     // Delete a task by id
     app.delete('/tasks/:id', taskController.delete)
+    app.all('*', (request, response, next) => {
+        response.sendFile(path.resolve("./public/dist/public/index.html"))
+    });
 }

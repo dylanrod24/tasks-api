@@ -5,13 +5,13 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class HttpService {
-	constructor(private _http: HttpClient){
+	constructor(private _http: HttpClient) {
     }
 
     getTasks(){
         return this._http.get('/tasks')
     }
-    addTask(newtask){
+    addTask(newtask) {
         return this._http.post('/tasks', newtask)
     }
 }
